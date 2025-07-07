@@ -1,0 +1,362 @@
+/* filepath: app/globals.css */
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Hector';
+  src: url('./components/font/Heading 1/hector-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Basement Grotesque';
+  src: url('./components/font/Heading 1/BasementGrotesque-Black_v1.202.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JUST Sans';
+  src: url('./components/font/JustSan/JUST Sans Regular.woff2') format('woff2'),
+       url('./components/font/JustSan/JUST Sans Regular.woff') format('woff'),
+       url('./components/font/JustSan/JUST Sans Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Light theme colors ( Not OK)*/
+  --light-background: 60 9% 85%;
+  --light-foreground: 0 0% 10%;
+  --light-card: 0 0% 100%;
+  --light-card-foreground: 0 0% 10%;
+  --light-primary: 0 0% 10%;
+  --light-primary-foreground: 60 9% 85%;
+  --light-secondary: 60 5% 90%;
+  --light-secondary-foreground: 0 0% 10%;
+  --light-muted: 60 5% 90%;
+  --light-muted-foreground: 0 0% 40%;
+  --light-accent: 60 5% 90%;
+  --light-accent-foreground: 0 0% 10%;
+  --light-border: 0 0% 90%;
+  --light-input: 0 0% 90%;
+  --light-ring: 0 0% 10%;
+
+  /* Dark theme colors */
+  --dark-background: 0 100% 0%;
+  --dark-foreground: 0 0% 95%;
+  --dark-card: 0 0% 10%;
+  --dark-card-foreground: 0 0% 95%;
+  --dark-primary: 0 0% 95%;
+  --dark-primary-foreground: 0 0% 7%;
+  --dark-secondary: 0 0% 15%;
+  --dark-secondary-foreground: 0 0% 95%;
+  --dark-muted: 0 0% 15%;
+  --dark-muted-foreground: 0 0% 65%;
+  --dark-accent: 0 0% 15%;
+  --dark-accent-foreground: 0 0% 95%;
+  --dark-border: 0 0% 20%;
+  --dark-input: 0 0% 20%;
+  --dark-ring: 0 0% 80%;
+
+  /* Global theme colors */
+  --global-background-color: #ffffff;
+  --global-foreground-color: #090a0900;
+  --global-muted-color: #090a0900;
+  --global-primary-color: #0070f3;
+}
+
+[data-theme="dark"] {
+  --global-background-color: #090a0900;
+  --global-foreground-color: #eeeeee;
+  --global-muted-color: #090a0900
+  --global-primary-color: #0055aa;
+}
+
+.light {
+  --background: var(--light-background);
+  --foreground: var(--light-foreground);
+  --card: var(--light-card);
+  --card-foreground: var(--light-card-foreground);
+  --primary: var(--light-primary);
+  --primary-foreground: var(--light-primary-foreground);
+  --secondary: var(--light-secondary);
+  --secondary-foreground: var(--light-secondary-foreground);
+  --muted: var(--light-muted);
+  --muted-foreground: var(--light-muted-foreground);
+  --accent: var(--light-accent);
+  --accent-foreground: var(--light-accent-foreground);
+  --border: var(--light-border);
+  --input: var(--light-input);
+  --ring: var(--light-ring);
+}
+
+.dark {
+  --background: var(--dark-background);
+  --foreground: var(--dark-foreground);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-card-foreground);
+  --primary: var(--dark-primary);
+  --primary-foreground: var(--dark-primary-foreground);
+  --secondary: var(--dark-secondary);
+  --secondary-foreground: var(--dark-secondary-foreground);
+  --muted: var(--dark-muted);
+  --muted-foreground: var(--dark-muted-foreground);
+  --accent: var(--dark-accent);
+  --accent-foreground: var(--dark-accent-foreground);
+  --border: var(--dark-border);
+  --input: var(--dark-input);
+  --ring: var(--dark-ring);
+}
+
+html, body, #root, * {
+  font-family: 'Hector''JUST Sans', 'Arial', 'sans-serif' !important;
+}
+
+body, html {
+  font-family: 'JUST Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: 0em; /* Change this value as needed */
+}
+
+h1, h2 {
+  font-family: 'Basement Grotesque' ,'Hector', 'JUST Sans', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2em; /* Change this value as needed */
+}
+h3{
+  font-family: 'Hector';
+  letter-spacing: 0em; /* Change this value as needed */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color:  hsl(0, 0%, 0%);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animation utilities */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  border: 1px solid hsl(var(--primary));
+  color: hsl(var(--primary));
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: hsl(var(--primary), 0.1);
+}
+
+/* Section styles */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+/* Video progress */
+.video-progress {
+  height: 2px;
+  background-color: hsl(0, 0%, 0%);
+  width: 100%;
+  position: relative;
+}
+
+.video-progress-bar {
+  height: 100%;
+  background-color:  hsl(0, 0%, 0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+}
+
+/* Enhanced animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Devices */
+/* Devices */
+/* Devices */
+/* Devices */
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}

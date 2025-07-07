@@ -1,0 +1,36 @@
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(53, 221, 123);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+}
+
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.custom-cursor.hidden {
+  opacity: 0;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background-color: rgb(62, 204, 69);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot.hidden {
+  opacity: 0;
+}

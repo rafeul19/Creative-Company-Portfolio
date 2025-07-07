@@ -1,0 +1,254 @@
+/* Use global variables – these should be defined in your global CSS */
+:root {
+  --background: var(--global-background-color); /* e.g., light: 0, 0%, 100% and dark: 0, 0%, 0% */
+  --foreground: var(--global-foreground-color); /* e.g., light: 0, 0%, 20% and dark: 0, 0%, 90% */
+  --muted-foreground: var(--global-muted-color);  /* e.g., light: 0, 0%, 40% and dark: 0, 0%, 60% */
+  --primary: var(--global-primary-color);         /* your primary hue, e.g., 210,90%,56% */
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 5rem 0;
+  background-color: hsl(var(--background));
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Heading */
+.timeline-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+  color: hsl(var(--foreground));
+}
+
+.timeline-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+}
+
+/* Content & Vertical Line */
+.timeline-content {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+  opacity: 0.7;
+  border-radius: 2px;
+}
+
+/* Flower Icon */
+.timeline-flower {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: hsl(var(--primary));
+}
+
+/* Timeline Event */
+.timeline-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-event.reverse {
+  flex-direction: row-reverse;
+}
+
+.timeline-spacer {
+  width: 40%;
+}
+
+/* Icon for Each Event */
+.timeline-icon-container {
+  z-index: 20;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: iconPulse 2s infinite ease-in-out;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+}
+
+.timeline-icon:nth-child(2n) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 0 20px rgba(240, 147, 251, 0.4);
+}
+
+.timeline-icon:nth-child(3n) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+}
+
+.timeline-icon:nth-child(4n) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0 0 20px rgba(67, 233, 123, 0.4);
+}
+
+.timeline-icon:nth-child(5n) {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  box-shadow: 0 0 20px rgba(250, 112, 154, 0.4);
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+  }
+}
+
+.timeline-icon-inner {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: innerSpin 3s linear infinite;
+}
+
+@keyframes innerSpin {
+  0% {
+    transform: rotate(0deg);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: rotate(180deg);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Event Content Card */
+.timeline-event-content {
+  width: 40%;
+  cursor: pointer;
+}
+
+/* Always-visible animated border for event cards */
+.event-card {
+  padding: 1rem;
+  background-color: hsl(var(--background)); /* dynamic via global theme */
+  border: 1px solid hsla(var(--primary), 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  position: relative; /* so pseudo-element is positioned relative to the card */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-radius: inherit; /* match card rounding */
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff6b6b) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: rainbowBorder 4s linear infinite;
+}
+
+@keyframes rainbowBorder {
+  0% {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff6b6b) border-box;
+    opacity: 0.6;
+  }
+  25% {
+    background: linear-gradient(45deg, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff6b6b, #4ecdc4) border-box;
+    opacity: 0.8;
+  }
+  50% {
+    background: linear-gradient(45deg, #45b7d1, #96ceb4, #feca57, #ff6b6b, #4ecdc4, #45b7d1) border-box;
+    opacity: 1;
+  }
+  75% {
+    background: linear-gradient(45deg, #96ceb4, #feca57, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) border-box;
+    opacity: 0.8;
+  }
+  100% {
+    background: linear-gradient(45deg, #feca57, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57) border-box;
+    opacity: 0.6;
+  }
+}
+
+.event-year {
+  font-weight: bold;
+  color: hsl(var(--primary));
+}
+
+.event-title {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  color: hsl(var(--foreground));
+}
+
+.event-description {
+  color: hsl(var(--muted-foreground));
+}
+
+.event-details {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+}
+
+/* Optional: Override flower icon default size */
+.flower-icon {
+  width: 24px;
+  height: 24px;
+}

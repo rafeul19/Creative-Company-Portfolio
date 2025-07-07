@@ -1,0 +1,113 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  transition: background-color 0.1s;
+}
+
+.preloader-container {
+  text-align: center;
+}
+
+.preloader-circle {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.preloader-circle-border {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #ba47e7;
+  border-radius: 9999px;
+  opacity: 0.2;
+}
+
+.preloader-circle-top-border {
+  position: absolute;
+  inset: 0;
+  border-top: 2px solid #3c85f3;
+  border-radius: 9999px;
+}
+
+.preloader-circle-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-circle-inner-bg {
+  width: 6rem;
+  height: 6rem;
+  background: linear-gradient(to bottom right, #000000, #000000);
+  border-radius: 9999px;
+}
+
+.preloader-title {
+  font-size: 4rem;
+  letter-spacing: 0.25em;
+  color: #ffffff;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  .preloader-title {
+    font-size: 2.5rem;
+  }
+}
+
+.preloader-letter {
+  display: inline-block;
+  margin: 0 0.05em;
+  opacity: 0;
+}
+
+.preloader-space {
+  display: inline-block;
+  width: 1rem;
+}
+
+.preloader-progress {
+  width: 12rem;
+  height: 1px;
+  background-color: #000000;
+  margin: 2rem auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000000;
+}
+
+.preloader-progress-text {
+  color: #000000;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+}
+
+.preloader-logo {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  pointer-events: none;
+}

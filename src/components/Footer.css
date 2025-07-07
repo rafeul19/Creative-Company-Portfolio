@@ -1,0 +1,124 @@
+.footer {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-brand {
+  max-width: 20rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav,
+.footer-contact,
+.footer-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li,
+.footer-contact li,
+.footer-social li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-nav a,
+.footer-social a {
+  color: hsl(var(--muted-foreground));
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: hsl(var(--foreground));
+}
+
+.footer-contact li {
+  color: hsl(var(--muted-foreground));
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border));
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.footer-email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-email-link:hover {
+  color: #f5faf5; /* or your brand color */
+  text-decoration: underline;
+}
+
+.footer-nav li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.footer-brand-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-brand-image {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}

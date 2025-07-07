@@ -1,0 +1,145 @@
+.contact-page {
+  padding-top: 5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-details {
+  margin: 2rem 0;
+}
+
+.contact-detail {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.contact-detail-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.contact-detail-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.contact-detail-text {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.contact-social {
+  margin-top: 2rem;
+}
+
+.contact-social-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-social-link {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.3s ease;
+}
+
+.contact-social-link:hover {
+  color: hsl(var(--foreground));
+}
+
+.contact-form-container {
+  background-color: hsl(var(--card));
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-success {
+  background-color: rgba(0, 200, 83, 0.1);
+  color: rgb(0, 200, 83);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: rgb(255, 0, 0);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.25rem;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+}
+
+.form-submit {
+  width: 100%;
+}
+
+.map-section {
+  padding: 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.contact-email-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-email-link:hover {
+  color: #f4f7f3; /* or your brand color */
+  text-decoration: underline;
+}
