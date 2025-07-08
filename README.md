@@ -94,11 +94,11 @@
 
 ## ✨ Features
 
-<img src="./gif2.gif" width="200px" />| <img src="./gif3.gif" width="200px" /> |
+<img src="./gif2.gif" width="350px" />| <img src="./gif3.gif" width="350px" /> |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | **📱 Fully Responsive**<br/>Perfect viewing experience across all devices                             | **🎨 Modern Design**<br/>Clean, professional and visually appealing                           |
 
-<img src="./gif4.gif" width="200px" /> |  <img src="./gif5.gif" width="200px" /> |
+<img src="./gif4.gif" width="350px" /> |  <img src="./gif5.gif" width="350px" /> |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | **🖼️ Portfolio Gallery**<br/>Interactive showcase with lightbox functionality                         | **⚡ Smooth Animations**<br/>Engaging hover effects and transitions                                   |
 
